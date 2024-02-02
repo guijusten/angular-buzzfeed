@@ -1,14 +1,16 @@
-<div class="header">
+<header>
   <img src="../../../assets/images/logo.png" alt="BuzzFeed" />
   <h2>{{ data.title }}</h2>
-</div>
+</header>
 
 <div class="quiz">
   <section class="main-question">
     {{ current_question.question }}
   </section>
-  <ul *ngFor="let option of current_question.options" class="options">
-    <li>{{ option["name"] }}</li>
+  <ul class="options-list">
+    <div *ngFor="let option of current_question.options">
+      <li>{{ option["name"] }}</li>
+    </div>
   </ul>
 </div>
 
