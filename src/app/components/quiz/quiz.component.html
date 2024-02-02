@@ -1,1 +1,17 @@
-<p>quiz works!</p>
+<div class="header">
+  <img src="../../../assets/images/logo.png" alt="BuzzFeed" />
+  <h2>{{ data.title }}</h2>
+</div>
+
+<div class="quiz">
+  <section class="main-question">
+    {{ current_question.question }}
+  </section>
+  <ul *ngFor="let option of current_question.options" class="options">
+    <li>{{ option["name"] }}</li>
+  </ul>
+</div>
+
+<footer>
+  <p>alguma coisa</p>
+</footer>
