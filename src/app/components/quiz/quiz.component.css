@@ -1,3 +1,7 @@
+:root {
+  --result_bg: #fff;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -51,6 +55,37 @@ li {
 
 li:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+li:active {
+  background-color: rgba(0, 128, 0, 0.8);
+}
+
+.result {
+  border-radius: 18px;
+  text-align: center;
+  padding: 100px;
+  width: 38vw;
+  margin: 14vh auto;
+  background-color: rgba(57, 47, 197, 0.8);
+}
+
+h3 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  background-color: rgb(41, 32, 167, 0);
+}
+
+h5 {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: normal;
+  background-color: rgb(41, 32, 167, 0);
+}
+
+u {
+  background-color: rgb(41, 32, 167, 0);
 }
 
 footer {

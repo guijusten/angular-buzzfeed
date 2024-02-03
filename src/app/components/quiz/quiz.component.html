@@ -3,16 +3,26 @@
   <h2>{{ data.title }}</h2>
 </header>
 
-<div class="quiz">
+<div *ngIf="isPlaying" class="quiz">
   <section class="main-question">
     {{ current_question.question }}
   </section>
   <ul class="options-list">
-    <div *ngFor="let option of current_question.options">
+    <div
+      *ngFor="let option of current_question.options; let prop"
+      (click)="handleClick(prop)"
+    >
       <li>{{ option["name"] }}</li>
     </div>
   </ul>
 </div>
+
+<section *ngIf="!isPlaying" class="result">
+  <h3>o seu resultado é:</h3>
+  <h5>
+    Você seria um super <u>{{ result }}</u>
+  </h5>
+</section>
 
 <footer>
   <p>alguma coisa</p>
