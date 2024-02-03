@@ -10,7 +10,7 @@
   <ul class="options-list">
     <div
       *ngFor="let option of current_question.options; let prop"
-      (click)="handleClick(prop)"
+      (click)="handleOptionClick(prop)"
     >
       <li>{{ option["name"] }}</li>
     </div>
@@ -22,6 +22,10 @@
   <h5>
     Você seria um super <u>{{ result }}</u>
   </h5>
+  <div class="btn-container">
+    <button>MENU</button>
+    <button (click)="handleAgainClick()">DE NOVO</button>
+  </div>
 </section>
 
 <footer>

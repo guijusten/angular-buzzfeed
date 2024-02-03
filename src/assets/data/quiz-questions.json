@@ -1,9 +1,9 @@
 {
-  "title": "Você seria um heroi ou vilão ?",
+  "title": "Você seria um heroi ou vilão?",
   "questions": [
     {
       "id": 1,
-      "question": "Qual super poder você escolheria ?",
+      "question": "Qual super poder você escolheria?",
       "options": [
         { "id": 1, "name": "Raios-Lasers", "alias": "A" },
         { "id": 2, "name": "Voar", "alias": "B" },

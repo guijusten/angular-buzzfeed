@@ -28,7 +28,7 @@ export class QuizComponent implements OnInit {
   index: number = 0;
   current_question: Question = { id: 0, question: '', options: [] };
   user_choices: string[] = [];
-  isPlaying: boolean = true;
+  isPlaying: boolean = !true;
   result: string = '';
 
   countOccurences(element: string) {
@@ -38,7 +38,7 @@ export class QuizComponent implements OnInit {
     );
   }
 
-  handleClick = (prop: Option) => {
+  handleOptionClick = (prop: Option) => {
     this.user_choices.push(prop.alias);
 
     this.index += 1;
@@ -50,6 +50,13 @@ export class QuizComponent implements OnInit {
         this.result = 'Vilão';
       this.isPlaying = !this.isPlaying;
     }
+  };
+
+  handleAgainClick = () => {
+    this.user_choices = [];
+    this.isPlaying = !this.isPlaying;
+    this.index = 0;
+    this.current_question = this.data.questions[this.index];
   };
 
   constructor() {
