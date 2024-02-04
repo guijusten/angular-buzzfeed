@@ -23,8 +23,15 @@
     Você seria um super <u>{{ result }}</u>
   </h5>
   <div class="btn-container">
-    <button>MENU</button>
-    <button (click)="handleAgainClick()">DE NOVO</button>
+    <a
+      class="btn"
+      [routerLink]="['/']"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      MENU
+    </a>
+    <button class="btn" (click)="handleAgainClick()">DE NOVO</button>
   </div>
 </section>
 

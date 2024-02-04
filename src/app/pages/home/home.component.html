@@ -1,1 +1,29 @@
-<app-quiz></app-quiz>
+<header>
+  <img src="../../../assets/images/logo.png" alt="BuzzFeed" />
+</header>
+
+<section class="container">
+  <h2>qual quiz você quer jogar?</h2>
+
+  <ul class="options-list">
+    <div *ngFor="let quiz of quizzes; index as i" (click)="handleQuizClick()">
+      <li>
+        <a
+          [routerLink]="['/quiz', i]"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+        >
+          <img class="card-img" src="{{ quiz.img }}" alt="{{ quiz.name }}" />
+        </a>
+        <br />
+        <a
+          [routerLink]="['/quiz', i]"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+        >
+          <p>{{ quiz.name }}</p>
+        </a>
+      </li>
+    </div>
+  </ul>
+</section>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 type Data = {
   title: string;
@@ -28,7 +29,7 @@ export class QuizComponent implements OnInit {
   index: number = 0;
   current_question: Question = { id: 0, question: '', options: [] };
   user_choices: string[] = [];
-  isPlaying: boolean = !true;
+  isPlaying: boolean = true;
   result: string = '';
 
   countOccurences(element: string) {
@@ -59,11 +60,19 @@ export class QuizComponent implements OnInit {
     this.current_question = this.data.questions[this.index];
   };
 
-  constructor() {
-    var json = require('../../../assets/data/quiz-questions.json');
-    this.data = json;
-    this.current_question = this.data.questions[this.index];
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    var id: any = '';
+
+    this.route.paramMap.subscribe((value) => (id = value.get('id')));
+
+    this.setValuesToComponent(id);
   }
 
-  ngOnInit(): void {}
+  setValuesToComponent(id: any) {
+    var json = require('../../../assets/data/quiz-questions.json');
+    this.data = json[id];
+    this.current_question = this.data.questions[this.index];
+  }
 }
