@@ -1,9 +1,19 @@
-Mover lógica feita construtor dos componentes para o ngOnInit
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- PENDENTE -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-Fazer página Home com affordances que informam os possíveis quizzes a serem jogados
+Mover lógica feita construtor dos componentes para o ngOnInit
 
 Fazer botão dentro do resultado de um quiz para voltar ao menu
 
 Fazer outra página que mostra os resultados dos quizzes jogados pelo usuário naquela sessão
 
 Reposicionar texto no botao do MENU quando estiver jogando o quiz
+
+Reajustar tamanhos dos títulos e verificar a interface como um todo
+
+Ver se consigo mudar o id da rota do quiz, ao invés de começar no 0, começar no 1
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- CONCLUÍDO -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Fazer página Home com affordances que informam os possíveis quizzes a serem jogados
+
+Fazer componente footer
