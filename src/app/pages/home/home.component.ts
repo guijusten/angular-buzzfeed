@@ -14,7 +14,9 @@ export class HomeComponent implements OnInit {
     console.log('click on quiz card');
   }
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     var json = require('../../../assets/data/quiz-questions.json');
 
     this.quizzes = json.map(
@@ -24,6 +26,4 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-
-  ngOnInit(): void {}
 }

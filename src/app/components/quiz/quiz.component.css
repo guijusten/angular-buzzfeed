@@ -93,6 +93,7 @@ u {
   padding: 1vh 0px;
   display: flex;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 .btn {
@@ -104,13 +105,27 @@ u {
   font-size: 0.9rem;
   transition: all 0.4s linear;
   border: none;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0);
   font-weight: bold;
   text-decoration: none;
   text-align: center;
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255);
   color: black;
+}
+
+a {
+  position: relative;
+  text-align: center;
+}
+
+p {
+  border-radius: 10px;
+  background-color: inherit;
+  width: 100%;
+  color: inherit;
+  text-align: center;
+  margin-top: 3px;
 }

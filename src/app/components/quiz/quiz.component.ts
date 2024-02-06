@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 type Data = {
   title: string;
   questions: [];
-  results: {};
+  results: { A: string; B: string };
 };
 
 type Question = {
@@ -25,7 +25,7 @@ type Option = {
   styleUrls: ['./quiz.component.css'],
 })
 export class QuizComponent implements OnInit {
-  data: Data = { title: '', questions: [], results: {} };
+  data: Data = { title: '', questions: [], results: { A: '', B: '' } };
   index: number = 0;
   current_question: Question = { id: 0, question: '', options: [] };
   user_choices: string[] = [];
@@ -46,9 +46,9 @@ export class QuizComponent implements OnInit {
     if (this.data.questions[this.index]) {
       this.current_question = this.data.questions[this.index];
     } else {
-      this.result = 'Herói';
+      this.result = this.data.results.B;
       if (this.countOccurences('A') > this.countOccurences('B'))
-        this.result = 'Vilão';
+        this.result = this.data.results.A;
       this.isPlaying = !this.isPlaying;
     }
   };
@@ -73,6 +73,8 @@ export class QuizComponent implements OnInit {
   setValuesToComponent(id: any) {
     var json = require('../../../assets/data/quiz-questions.json');
     this.data = json[id];
+
     this.current_question = this.data.questions[this.index];
+    console.log(this.data);
   }
 }
